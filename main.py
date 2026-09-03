@@ -23,17 +23,21 @@ def menu_principal():
         if opcao == "1":
             if quantidade > 0:
                 quantidade -=1
+                print("Livro emprestado")
             else:
                 print("Não ha livros disponível!")
         
         elif opcao == "2":
             if quantidade < 50:
                 quantidade +=1
+                print("Livro devolvido")
             else:
                 print("Não ha livros emprestados!")
         
         elif opcao == "3":
             print("quantidade de livros disponível: ", quantidade)
+            emprestados = 50 - quantidade
+            print("quantidade de livros emprestados: ", emprestados)
         
         elif opcao == "0":
             print("Obrigado por usar nosso sistema!")
